@@ -29,8 +29,13 @@ test('should handle startEditExpense', () => {
 	expect(startEditExpense).toHaveBeenLastCalledWith(expenses[0].id, expenses[0]);
 });
 
-test('should handle startRemoveExpense', () => {
+test('should open modal on remove expense button click', () => {
 	wrapper.find('button').simulate('click');
-	expect(history.push).toHaveBeenLastCalledWith('/');
-	expect(startRemoveExpense).toHaveBeenLastCalledWith({id: expenses[0].id});
+	expect(wrapper.state('delete')).toBe(true);
 });
+
+// test('should handle startRemoveExpense', () => {
+// 	wrapper.find('button').simulate('click');
+// 	expect(history.push).toHaveBeenLastCalledWith('/');
+// 	expect(startRemoveExpense).toHaveBeenLastCalledWith({id: expenses[0].id});
+// });

@@ -1,18 +1,32 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import ExpenseForm from './ExpenseForm';
+import RemoveModal from './RemoveModal';
 import { startRemoveExpense, startEditExpense } from '../actions/expenses';
 
 export class EditExpensePage extends React.Component {
+	state = {
+		delete: false
+	}
+
 	onSubmit = (expense) => {
 		this.props.startEditExpense(this.props.expense.id, expense);
 		this.props.history.push('/');
 	}
 
 	onClick = () => {
-		this.props.startRemoveExpense({ id: this.props.expense.id });
-		this.props.history.push('/');		
+		this.setState(() => ({ delete: true }));	
 	}
+
+	handleDeleteExpense = () => {
+		this.setState(() => ({ delete: false }));
+		this.props.startRemoveExpense({ id: this.props.expense.id });
+		this.props.history.push('/');	
+	};
+
+	handleCancelDeleteExpense = () => {
+		this.setState(() => ({ delete: false }));	
+	};
 
 	render() {
 		return (
@@ -31,6 +45,11 @@ export class EditExpensePage extends React.Component {
 						Remove Expense
 					</button>
 				</div>
+				<RemoveModal 
+					delete={this.state.delete}
+					handleDeleteExpense={this.handleDeleteExpense}
+					handleCancelDeleteExpense={this.handleCancelDeleteExpense}
+				/>
 			</div>
 		);
 	}

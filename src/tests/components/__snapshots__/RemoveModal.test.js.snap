@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render React Modal component correctly 1`] = `
+<Modal
+  ariaHideApp={true}
+  bodyOpenClassName="ReactModal__Body--open"
+  className="modal"
+  closeTimeoutMS={200}
+  contentLabel="Are you sure you want to remove this expense?"
+  isOpen={true}
+  onRequestClose={[Function]}
+  parentSelector={[Function]}
+  portalClassName="ReactModalPortal"
+  shouldCloseOnOverlayClick={true}
+>
+  <h3
+    className="modal__title"
+  >
+    Are you sure you want to remove this expense?
+  </h3>
+  <button
+    className="button button--modal"
+    onClick={[Function]}
+  >
+    Yes
+  </button>
+  <button
+    className="button button--modal"
+    onClick={[Function]}
+  >
+    No
+  </button>
+</Modal>
+`;
