@@ -8,6 +8,7 @@ const RemoveModal = (props) => (
 		onRequestClose={props.handleCancelDeleteExpense}
 		closeTimeoutMS={200}
 		className="modal"
+		ariaHideApp={false}
 	>
 		<h3 className="modal__title">Are you sure you want to remove this expense?</h3>
 		<button className="button button--modal" onClick={props.handleDeleteExpense}>Yes</button>
