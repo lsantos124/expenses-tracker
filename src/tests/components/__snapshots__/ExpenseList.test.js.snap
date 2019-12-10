@@ -34,6 +34,29 @@ exports[`should render ExpenseList with empty message 1`] = `
       </span>
     </div>
   </div>
+  <div
+    className="list-buttons"
+  >
+    <CSVLink
+      asyncOnClick={false}
+      className="button button--csvlink"
+      data={
+        Array [
+          Array [
+            "description",
+            "amount",
+            "createdAt",
+          ],
+        ]
+      }
+      filename="text=_startDate=December 31st, 1969_endDate=December 31st, 1969.csv"
+      separator=","
+      target="_blank"
+      uFEFF={true}
+    >
+      Download
+    </CSVLink>
+  </div>
 </div>
 `;
 
@@ -87,6 +110,44 @@ exports[`should render ExpenseList with expenses 1`] = `
       key="3"
       note=""
     />
+  </div>
+  <div
+    className="list-buttons"
+  >
+    <CSVLink
+      asyncOnClick={false}
+      className="button button--csvlink"
+      data={
+        Array [
+          Array [
+            "description",
+            "amount",
+            "createdAt",
+          ],
+          Array [
+            "Gum",
+            195,
+            "December 31st, 1969",
+          ],
+          Array [
+            "Rent",
+            109500,
+            "December 27th, 1969",
+          ],
+          Array [
+            "Credit Card",
+            4500,
+            "January 4th, 1970",
+          ],
+        ]
+      }
+      filename="text=_startDate=December 31st, 1969_endDate=December 31st, 1969.csv"
+      separator=","
+      target="_blank"
+      uFEFF={true}
+    >
+      Download
+    </CSVLink>
   </div>
 </div>
 `;

@@ -2,7 +2,7 @@
 
 exports[`should render React Modal component correctly 1`] = `
 <Modal
-  ariaHideApp={true}
+  ariaHideApp={false}
   bodyOpenClassName="ReactModal__Body--open"
   className="modal"
   closeTimeoutMS={200}

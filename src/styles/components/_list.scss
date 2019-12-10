@@ -61,3 +61,12 @@
 		padding-left: $s-size;
 	}
 }
+
+.list-buttons {
+	display: flex;
+	justify-content: flex-end;
+	margin-bottom: $m-size;
+	@media (min-width: $desktop-breakpoint) {
+		margin-bottom: $l-size;
+	}
+}
