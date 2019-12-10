@@ -40,7 +40,32 @@ exports[`should correctly render ExpensesSummary with 1 expense 1`] = `
     <div
       className="graph"
     >
-      <ExpensesBarChart />
+      <ExpensesBarChart
+        data={
+          Array [
+            Object {
+              "x": "12-31",
+              "y": 25,
+            },
+            Object {
+              "x": "01-01",
+              "y": "",
+            },
+            Object {
+              "x": "01-02",
+              "y": "",
+            },
+            Object {
+              "x": "01-03",
+              "y": "",
+            },
+            Object {
+              "x": "01-04",
+              "y": 16,
+            },
+          ]
+        }
+      />
     </div>
   </div>
 </div>
@@ -86,7 +111,32 @@ exports[`should correctly render ExpensesSummary with multiple expenses 1`] = `
     <div
       className="graph"
     >
-      <ExpensesBarChart />
+      <ExpensesBarChart
+        data={
+          Array [
+            Object {
+              "x": "12-31",
+              "y": 25,
+            },
+            Object {
+              "x": "01-01",
+              "y": "",
+            },
+            Object {
+              "x": "01-02",
+              "y": "",
+            },
+            Object {
+              "x": "01-03",
+              "y": "",
+            },
+            Object {
+              "x": "01-04",
+              "y": 16,
+            },
+          ]
+        }
+      />
     </div>
   </div>
 </div>

@@ -20,9 +20,15 @@ export const ExpensesSummary = ({ expenseCount, expensesTotal, hiddenExpenseCoun
 				<div className="page-header__actions">
 					<Link className="button" to="/create">Add Expense</Link>
 				</div>
-				<div className="graph">
-					<ExpensesBarChart data={expensesOverTime}/>
-				</div>
+				{
+					expensesOverTime.length === 0 ? (
+						<div></div>
+					) : (
+						<div className="graph">
+							<ExpensesBarChart data={expensesOverTime}/>
+						</div>
+					) 
+				}
 			</div>
 		</div>
 	);
