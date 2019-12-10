@@ -1,8 +1,8 @@
 import moment from 'moment';
-import selectExpenses from '../../selectors/expenses';
+import { getVisibleExpenses, getHiddenExpenses } from '../../selectors/expenses';
 import expenses from '../fixtures/expenses';
 
-test('should filter by text value', () => {
+test('should filter visible expenses by text value', () => {
 	const filters = {
 		text: 'e',
 		sortBy: 'date',
@@ -10,30 +10,64 @@ test('should filter by text value', () => {
 		endDate: undefined
 	}; 
 
-	const result = selectExpenses(expenses, filters);
+	const result = getVisibleExpenses(expenses, filters);
 	expect(result).toEqual([ expenses[2], expenses[1] ]);
 });
 
-test('should filter by start date', () => {
+test('should filter hidden expenses by text value', () => {
+	const filters = {
+		text: 'e',
+		sortBy: 'date',
+		startDate: undefined,
+		endDate: undefined
+	}; 
+
+	const result = getHiddenExpenses(expenses, filters);
+	expect(result).toEqual([expenses[0]]);
+});
+
+test('should filter visible expenses by start date', () => {
 	const filters = {
 		text: '',
 		sortBy: 'date',
 		startDate: moment(0),
 		endDate: undefined
 	};
-	const result = selectExpenses(expenses, filters);
+	const result = getVisibleExpenses(expenses, filters);
 	expect(result).toEqual([ expenses[2], expenses[0] ]);
 });
 
-test('should filter by end date', () => {
+test('should filter hidden expenses by start date', () => {
+	const filters = {
+		text: '',
+		sortBy: 'date',
+		startDate: moment(0),
+		endDate: undefined
+	};
+	const result = getHiddenExpenses(expenses, filters);
+	expect(result).toEqual([ expenses[1] ]);
+});
+
+test('should filter visible expenses by end date', () => {
 	const filters = {
 		text: '',
 		sortBy: 'date',
 		startDate: undefined,
 		endDate: moment(0)
 	};
-	const result = selectExpenses(expenses, filters);
+	const result = getVisibleExpenses(expenses, filters);
 	expect(result).toEqual([ expenses[0], expenses[1] ]);
+});
+
+test('should filter hidden expenses by end date', () => {
+	const filters = {
+		text: '',
+		sortBy: 'date',
+		startDate: undefined,
+		endDate: moment(0)
+	};
+	const result = getHiddenExpenses(expenses, filters);
+	expect(result).toEqual([ expenses[2] ]);
 });
 
 test('should sort by date', () => {
@@ -43,7 +77,7 @@ test('should sort by date', () => {
 		startDate: undefined,
 		endDate: undefined
 	};
-	const result = selectExpenses(expenses, filters);
+	const result = getVisibleExpenses(expenses, filters);
 	expect(result).toEqual([ expenses[2], expenses[0], expenses[1] ]); 
 });
 
@@ -54,7 +88,7 @@ test('should sort by date', () => {
 		startDate: undefined,
 		endDate: undefined
 	};
-	const result = selectExpenses(expenses, filters);
+	const result = getVisibleExpenses(expenses, filters);
 	expect(result).toEqual([ expenses[1], expenses[2], expenses[0] ]);
 });
 
