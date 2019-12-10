@@ -1,0 +1,14 @@
+.graph {
+	padding: $s-size $s-size;
+	padding-top: $l-size;
+}
+
+.rv-xy-plot__grid-lines__line {
+    stroke: gray;
+    stroke-width: 0.2;
+}
+
+.rv-xy-plot__axis {
+	stroke: gray;
+	stroke-width: 0.4;
+}
