@@ -17,9 +17,7 @@ class ExpensesBarChart extends React.Component {
 			maxData = Math.max(maxData, data['y']);
 			return data;
 		});
-
-		console.log(maxData);
-
+        
         const data = this.props.data;
         const chartHeight = 250;
         const chartDomain = [0, maxData + 20];

@@ -1,0 +1,160 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render ExpensesBarChart with expenses 1`] = `
+<FlexibleXYPlot
+  height={250}
+  xType="ordinal"
+  yDomain={
+    Array [
+      0,
+      45,
+    ]
+  }
+>
+  <XAxis
+    attr="x"
+    attrAxis="y"
+    orientation="bottom"
+    tickLabelAngle={45}
+    tickPadding={35}
+    tickValues={
+      Array [
+        "12-31",
+        "01-01",
+        "01-02",
+        "01-03",
+        "01-04",
+      ]
+    }
+    title="Date"
+  />
+  <YAxis
+    attr="y"
+    attrAxis="x"
+    orientation="left"
+    title="Amount ($)"
+  />
+  <VerticalBarSeries
+    className=""
+    data={
+      Array [
+        Object {
+          "x": "12-31",
+          "y": 25,
+        },
+        Object {
+          "x": "01-01",
+          "y": "",
+        },
+        Object {
+          "x": "01-02",
+          "y": "",
+        },
+        Object {
+          "x": "01-03",
+          "y": "",
+        },
+        Object {
+          "x": "01-04",
+          "y": 16,
+        },
+      ]
+    }
+    stack={false}
+    style={Object {}}
+  />
+  <LabelSeries
+    animation={false}
+    className=""
+    data={
+      Array [
+        Object {
+          "label": "25",
+          "x": "12-31",
+          "y": 25,
+        },
+        Object {
+          "label": "",
+          "x": "01-01",
+          "y": "",
+        },
+        Object {
+          "label": "",
+          "x": "01-02",
+          "y": "",
+        },
+        Object {
+          "label": "",
+          "x": "01-03",
+          "y": "",
+        },
+        Object {
+          "label": "16",
+          "x": "01-04",
+          "y": 16,
+        },
+      ]
+    }
+    getLabel={[Function]}
+    labelAnchorX="middle"
+    labelAnchorY="text-after-edge"
+    rotation={0}
+    stack={false}
+    style={Object {}}
+  />
+  <HorizontalGridLines
+    attr="y"
+    direction="horizontal"
+  />
+</FlexibleXYPlot>
+`;
+
+exports[`should render ExpensesBarChart with no expenses 1`] = `
+<FlexibleXYPlot
+  height={250}
+  xType="ordinal"
+  yDomain={
+    Array [
+      0,
+      20,
+    ]
+  }
+>
+  <XAxis
+    attr="x"
+    attrAxis="y"
+    orientation="bottom"
+    tickLabelAngle={45}
+    tickPadding={35}
+    tickValues={Array []}
+    title="Date"
+  />
+  <YAxis
+    attr="y"
+    attrAxis="x"
+    orientation="left"
+    title="Amount ($)"
+  />
+  <VerticalBarSeries
+    className=""
+    data={Array []}
+    stack={false}
+    style={Object {}}
+  />
+  <LabelSeries
+    animation={false}
+    className=""
+    data={Array []}
+    getLabel={[Function]}
+    labelAnchorX="middle"
+    labelAnchorY="text-after-edge"
+    rotation={0}
+    stack={false}
+    style={Object {}}
+  />
+  <HorizontalGridLines
+    attr="y"
+    direction="horizontal"
+  />
+</FlexibleXYPlot>
+`;
