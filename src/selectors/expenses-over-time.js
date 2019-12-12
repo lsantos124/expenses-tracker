@@ -11,7 +11,7 @@ export default (expenses, { text, sortBy, startDate, endDate }) => {
 			totalsPerDay[date] = 0.0;
 		}
 		totalsPerDay[date] += amount;
-
+		totalsPerDay[date] = Math.round(totalsPerDay[date] * 100) / 100;
 		return expense;
 	});
 

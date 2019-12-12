@@ -96,9 +96,9 @@ exports[`should render ExpensesBarChart with expenses 1`] = `
       ]
     }
     getLabel={[Function]}
-    labelAnchorX="middle"
+    labelAnchorX="start"
     labelAnchorY="text-after-edge"
-    rotation={0}
+    rotation={-45}
     stack={false}
     style={Object {}}
   />
@@ -146,9 +146,9 @@ exports[`should render ExpensesBarChart with no expenses 1`] = `
     className=""
     data={Array []}
     getLabel={[Function]}
-    labelAnchorX="middle"
+    labelAnchorX="start"
     labelAnchorY="text-after-edge"
-    rotation={0}
+    rotation={-45}
     stack={false}
     style={Object {}}
   />

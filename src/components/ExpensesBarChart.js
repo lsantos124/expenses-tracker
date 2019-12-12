@@ -50,8 +50,9 @@ class ExpensesBarChart extends React.Component {
                     data={data.map(obj => {
                         return { ...obj, label: obj.y.toString() }
                     })}
-                    labelAnchorX="middle"
+                    labelAnchorX="start"
                     labelAnchorY="text-after-edge"
+                    rotation={-45}
                 />
                 <HorizontalGridLines />
             </FlexibleWidthXYPlot>
