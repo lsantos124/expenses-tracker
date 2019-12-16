@@ -1,0 +1,202 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render AddCategoryPage correctly 1`] = `
+<div>
+  <div
+    className="page-header"
+  >
+    <div
+      className="content-container"
+    >
+      <h1
+        className="page-header__title"
+      >
+        Add Category
+      </h1>
+    </div>
+  </div>
+  <div
+    className="content-container"
+  >
+    <form
+      className="form"
+      onSubmit={[Function]}
+    >
+      <input
+        className="text-input"
+        onChange={[Function]}
+        placeholder="Category Title"
+        type="text"
+        value=""
+      />
+      <input
+        className="textarea"
+        onChange={[Function]}
+        placeholder="Category Description"
+        type="textarea"
+        value=""
+      />
+      <ColorPicker
+        color=""
+        colors={
+          Array [
+            "#FF6900",
+            "#FCB900",
+            "#7BDCB5",
+            "#00D084",
+            "#8ED1FC",
+            "#0693E3",
+            "#ABB8C3",
+            "#EB144C",
+            "#F78DA7",
+            "#9900EF",
+          ]
+        }
+        onChangeComplete={[Function]}
+        styles={Object {}}
+        triangle="top-left"
+        width={276}
+      />
+      <button
+        className="button"
+      >
+        Add Category
+      </button>
+    </form>
+  </div>
+</div>
+`;
+
+exports[`should set description on input change 1`] = `
+<div>
+  <div
+    className="page-header"
+  >
+    <div
+      className="content-container"
+    >
+      <h1
+        className="page-header__title"
+      >
+        Add Category
+      </h1>
+    </div>
+  </div>
+  <div
+    className="content-container"
+  >
+    <form
+      className="form"
+      onSubmit={[Function]}
+    >
+      <input
+        className="text-input"
+        onChange={[Function]}
+        placeholder="Category Title"
+        type="text"
+        value=""
+      />
+      <input
+        className="textarea"
+        onChange={[Function]}
+        placeholder="Category Description"
+        type="textarea"
+        value=""
+      />
+      <ColorPicker
+        color=""
+        colors={
+          Array [
+            "#FF6900",
+            "#FCB900",
+            "#7BDCB5",
+            "#00D084",
+            "#8ED1FC",
+            "#0693E3",
+            "#ABB8C3",
+            "#EB144C",
+            "#F78DA7",
+            "#9900EF",
+          ]
+        }
+        onChangeComplete={[Function]}
+        styles={Object {}}
+        triangle="top-left"
+        width={276}
+      />
+      <button
+        className="button"
+      >
+        Add Category
+      </button>
+    </form>
+  </div>
+</div>
+`;
+
+exports[`should set title on input change 1`] = `
+<div>
+  <div
+    className="page-header"
+  >
+    <div
+      className="content-container"
+    >
+      <h1
+        className="page-header__title"
+      >
+        Add Category
+      </h1>
+    </div>
+  </div>
+  <div
+    className="content-container"
+  >
+    <form
+      className="form"
+      onSubmit={[Function]}
+    >
+      <input
+        className="text-input"
+        onChange={[Function]}
+        placeholder="Category Title"
+        type="text"
+        value="Charity"
+      />
+      <input
+        className="textarea"
+        onChange={[Function]}
+        placeholder="Category Description"
+        type="textarea"
+        value=""
+      />
+      <ColorPicker
+        color=""
+        colors={
+          Array [
+            "#FF6900",
+            "#FCB900",
+            "#7BDCB5",
+            "#00D084",
+            "#8ED1FC",
+            "#0693E3",
+            "#ABB8C3",
+            "#EB144C",
+            "#F78DA7",
+            "#9900EF",
+          ]
+        }
+        onChangeComplete={[Function]}
+        styles={Object {}}
+        triangle="top-left"
+        width={276}
+      />
+      <button
+        className="button"
+      >
+        Add Category
+      </button>
+    </form>
+  </div>
+</div>
+`;

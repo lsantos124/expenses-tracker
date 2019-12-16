@@ -1,8 +1,9 @@
 import React from 'react';
 import moment from 'moment';
+import { connect } from 'react-redux';
 import { SingleDatePicker } from 'react-dates';
 
-export default class ExpenseForm extends React.Component {
+export class ExpenseForm extends React.Component {
 	constructor(props) {
 		super(props);
 	
@@ -11,6 +12,7 @@ export default class ExpenseForm extends React.Component {
 			note: props.expense ? props.expense.note : '',
 			amount: props.expense ? (props.expense.amount / 100).toString() : '',
 			createdAt: props.expense ? moment(props.expense.createdAt) : moment(),
+			category: props.expense ? props.expense.category : '',
 			calendarFocused: false,
 			error: ''
 		};
@@ -43,6 +45,11 @@ export default class ExpenseForm extends React.Component {
 		this.setState(() => ({ calendarFocused: focused }));
 	};
 
+	onSelectChange = (e) => {
+		const category = e.target.value;
+		this.setState(() => ({ category }));			
+	};
+
 	onSubmit = (e) => {
 		e.preventDefault();
 
@@ -54,7 +61,8 @@ export default class ExpenseForm extends React.Component {
 				description: this.state.description,
 				amount: parseFloat(this.state.amount, 10) * 100,
 				createdAt: this.state.createdAt.valueOf(),
-				note: this.state.note 
+				note: this.state.note,
+				category: this.state.category
 			});
 		}
 	};
@@ -86,6 +94,28 @@ export default class ExpenseForm extends React.Component {
 					numberOfMonths={1}
 					isOutsideRange={() => false}
 				/>
+				<div>
+					<label className="select__label">Category:</label>
+					<select 
+						className="select"
+						defaultValue={this.state.category}
+						onChange={this.onSelectChange}
+					>
+						<option value="">None</option>
+						{
+							this.props.categories.map(({id, title, color}) => {
+								return (
+									<option
+										key={id} 
+										value={title}
+									>
+										{title}
+									</option>
+								);
+							})
+						}
+					</select>
+				</div>
 				<textarea
 					className="textarea"
 					placeholder="Add a note for your expense (optional)"
@@ -100,3 +130,9 @@ export default class ExpenseForm extends React.Component {
 		);
 	}
 }
+
+const mapStateToProps = (state) => ({
+	categories: state.categories
+});
+
+export default connect(mapStateToProps)(ExpenseForm);

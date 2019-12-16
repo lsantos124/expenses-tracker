@@ -1,7 +1,7 @@
 import moment from 'moment';
 import numeral from 'numeral';
 
-export default (expenses, { text, sortBy, startDate, endDate }) => {
+export default (expenses, { startDate, endDate }) => {
 	const totalsPerDay = {};
 
 	expenses.map((expense) => {

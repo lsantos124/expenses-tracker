@@ -11,7 +11,7 @@ export const ExpenseList = (props) => {
 	const csvExpenseData = props.expenses.map(({ id, description, amount, createdAt }) => {
 		const createdAtFormatted = moment(createdAt).format('MMMM Do, YYYY');
 		const amountFormatted = numeral(amount / 100).format('$0,0.00');
-		return [description, amount, createdAtFormatted];
+		return [description, amountFormatted, createdAtFormatted];
 	});
 	const csvData = [ ...csvHeaders, ...csvExpenseData ];
 
@@ -34,7 +34,15 @@ export const ExpenseList = (props) => {
 					</div>
 				) : (
 					props.expenses.map((expense) => {
-						return <ExpenseListItem key={expense.id} {...expense} />;
+						let categoryColor = '';
+						props.categories.map((category) => {
+							if (category.title == expense.category) {
+								categoryColor = category.color;
+							}
+							return category
+						})
+
+						return <ExpenseListItem key={expense.id} {...expense} color={categoryColor} />;
 					})
 				)
 			}
@@ -55,7 +63,8 @@ export const ExpenseList = (props) => {
 const mapStateToProps = (state) => {
 	return {
 		expenses: getVisibleExpenses(state.expenses, state.filters),
-		filters: state.filters
+		filters: state.filters,
+		categories: state.categories
 	};
 }
 

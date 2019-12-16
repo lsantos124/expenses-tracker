@@ -1,0 +1,143 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render CustomizePage correctly 1`] = `
+<div>
+  <div
+    className="page-header"
+  >
+    <div
+      className="content-container"
+    >
+      <h1
+        className="page-header__title"
+      >
+        Customize Settings
+      </h1>
+    </div>
+  </div>
+  <div
+    className="content-container"
+  >
+    <div
+      className="list-header"
+    >
+      <div>
+        Categories
+      </div>
+    </div>
+    <div
+      className="list-body"
+    >
+      <div
+        className="list-item"
+        key="0"
+      >
+        <div
+          className="list-item__color"
+        >
+          <div
+            className="box-color"
+            style={
+              Object {
+                "backgroundColor": "ffffff",
+              }
+            }
+          />
+          <div>
+            <h3
+              className="list-item__title"
+            >
+              Charity
+            </h3>
+            <span
+              className="list-item__subtitle"
+            />
+          </div>
+        </div>
+        <button
+          className="button button--secondary"
+          onClick={[Function]}
+        >
+          Delete
+        </button>
+      </div>
+      <div
+        className="list-item"
+        key="1"
+      >
+        <div
+          className="list-item__color"
+        >
+          <div
+            className="box-color"
+            style={
+              Object {
+                "backgroundColor": "000000",
+              }
+            }
+          />
+          <div>
+            <h3
+              className="list-item__title"
+            >
+              Restaurants
+            </h3>
+            <span
+              className="list-item__subtitle"
+            />
+          </div>
+        </div>
+        <button
+          className="button button--secondary"
+          onClick={[Function]}
+        >
+          Delete
+        </button>
+      </div>
+      <div
+        className="list-item"
+        key="2"
+      >
+        <div
+          className="list-item__color"
+        >
+          <div
+            className="box-color"
+            style={
+              Object {
+                "backgroundColor": "f7f7f7",
+              }
+            }
+          />
+          <div>
+            <h3
+              className="list-item__title"
+            >
+              Bills
+            </h3>
+            <span
+              className="list-item__subtitle"
+            />
+          </div>
+        </div>
+        <button
+          className="button button--secondary"
+          onClick={[Function]}
+        >
+          Delete
+        </button>
+      </div>
+    </div>
+    <div
+      className="list-buttons"
+    >
+      <[object Object]
+        className="button"
+        to="/addCategory"
+      >
+        Add Category
+      </[object Object]>
+    </div>
+  </div>
+</div>
+`;

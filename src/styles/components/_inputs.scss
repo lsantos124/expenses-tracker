@@ -10,6 +10,12 @@
 	@extend .text-input;
 }
 
+.select__label {
+	font-size: $font-size-large;
+	font-weight: 300;
+	padding: $s-size;
+}
+
 .textarea {
 	@extend .text-input;
 	height: 10rem;

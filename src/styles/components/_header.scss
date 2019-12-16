@@ -9,6 +9,16 @@
 	padding: $s-size 0;
 }
 
+.header__links {
+	@extend .header__content;
+	display: flex;
+	justify-content: space-around;
+}
+
+.header__link {
+	margin-left: $m-size;
+}
+
 .header__title {
 	color: white;
 	text-decoration: none;
